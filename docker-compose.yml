@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  aturno-bff:
+    build: '.'
+    image: aturno/bff
+    container_name: aturno_bff
+    networks:
+      - backend
+    ports:
+      - 4000:3000
+    volumes:
+      - .:/go/src/app
+    tty: true
+networks:
+  backend:
