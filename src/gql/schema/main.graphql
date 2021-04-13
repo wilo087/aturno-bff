@@ -1,0 +1,19 @@
+type User {
+  id: Int
+  name: String!
+  lastName: String!
+  email: String!
+  createdAt: Time!
+  updatedAt: Time!
+}
+
+scalar Time
+
+type Query {
+  getUsers: [User]!
+}
+
+# extend type Query {
+#   users: [User]! @isAuth
+#   me: User! @isAuth
+# }
